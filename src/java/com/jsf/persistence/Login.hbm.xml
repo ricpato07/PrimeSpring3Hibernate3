@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 7/08/2016 09:46:19 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.jsf.persistence.Login" table="LOGIN" schema="PRUEBAS">
+        <id name="idusuario" type="int">
+            <column name="IDUSUARIO" precision="5" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="susuario" type="string">
+            <column name="SUSUARIO" length="80" not-null="true" />
+        </property>
+        <property name="spassword" type="string">
+            <column name="SPASSWORD" length="400" not-null="true" />
+        </property>
+        <property name="defchaexpira" type="date">
+            <column name="DEFCHAEXPIRA" length="7" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
